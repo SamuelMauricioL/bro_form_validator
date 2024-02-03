@@ -6,7 +6,7 @@ Form validator that provide common and custom validators for brovelopers
 
 assign it directly to a TextFormField validator
 
-```
+```dart
 TextFormField(
   validator: EmailValidator(errorText: 'enter a valid email address')
 );
@@ -14,7 +14,7 @@ TextFormField(
 
 is possible to create an instance to reuse it
 
-```
+```dart
 final requiredValidator = RequiredValidator(errorText: 'this field is required');
 ```
 
@@ -22,7 +22,7 @@ final requiredValidator = RequiredValidator(errorText: 'this field is required')
 
 assign the the multi validator to the TextFormField validator
 
-```
+```dart
 final passwordValidator = MultiValidator([
   RequiredValidator(errorText: 'password is required'),
   MinLengthValidator(8, errorText: 'password must be at least 8 digits long'),
@@ -37,7 +37,7 @@ TextFormField(
 
 It's possible to nest MultiValidator
 
-```
+```dart
 final passwordValidator = MultiValidator([
   MultiValidator([
     RequiredValidator(errorText: 'password is required'),
@@ -51,7 +51,7 @@ final passwordValidator = MultiValidator([
 
 use BroFieldValidator
 
-```
+```dart
 class PhoneValidator extends BroFieldValidator {
   // pass the error text to the super constructor
   PhoneValidator({String errorText = 'enter a valid LYD phone number'}) : super(errorText);
@@ -71,7 +71,7 @@ class PhoneValidator extends BroFieldValidator {
 
 and use this directly
 
-```
+```dart
 TextFormField(validator: PhoneValidator());
 ```
 
@@ -79,7 +79,7 @@ TextFormField(validator: PhoneValidator());
 
 just extend the base FieldValidator class
 
-```
+```dart
 class CustomValidator extends FieldValidator<T>{
   CustomValidator(String errorText) : super(errorText);
 
