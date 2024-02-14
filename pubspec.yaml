@@ -1,6 +1,6 @@
 name: bro_form_validator
 description: Form validator that provide common and custom validators for brovelopers
-version: 0.1.0
+version: 0.1.1
 homepage: https://github.com/SamuelMauricioL/bro_form_validator
 topics: [form, validator]
 
